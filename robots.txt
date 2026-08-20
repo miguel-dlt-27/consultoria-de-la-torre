@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap URL will be completed once the final public URL is defined.
