@@ -59,7 +59,20 @@
     .route:hover,.route.active{border-color:#111;transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.06)}
     .route .num{font-size:.72rem;color:var(--muted);font-weight:700;letter-spacing:.11em}.route h3{font-family:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;margin:20px 0 7px;font-size:1.48rem;font-weight:600;line-height:1}.route p{margin:0;color:var(--muted);font-size:.91rem}
     .route-result{display:none;margin-top:20px;padding:24px;border-radius:18px;background:#111;color:white}.route-result.show{display:flex;justify-content:space-between;gap:20px;align-items:center}.route-result p{margin:4px 0 0;color:#c7c7c7}
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px}.card h3{font-family:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:2rem;font-weight:600;letter-spacing:-.025em;line-height:1;margin:12px 0}.card p{color:var(--muted)}.card ul{padding-left:19px;color:#3f3f3f}.tag{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:24px;padding:26px;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+    .card h3{font-family:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:2rem;font-weight:600;letter-spacing:-.025em;line-height:1;margin:12px 0;transition:color .25s ease}
+    .card p{color:var(--muted);transition:color .25s ease}
+    .card ul{padding-left:19px;color:#3f3f3f;transition:color .25s ease}
+    .card .tag{transition:color .25s ease}
+    .services .card .btn{background:transparent;color:#111;border:1px solid #bcbcb8;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+    .services .card:hover{background:#111;color:#fff;border-color:#111;transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.14)}
+    .services .card:hover h3{color:#fff}
+    .services .card:hover p,.services .card:hover ul,.services .card:hover li{color:#c9c9c9}
+    .services .card:hover .tag{color:#9b9b9b}
+    .services .card:hover .btn{background:transparent;color:#fff;border-color:#555}
+    .services .card:hover .btn:hover{background:#fff;color:#111;border-color:#fff;transform:translateY(-1px)}
+    .tag{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--muted)}
     .courses{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.course{background:#141414;color:white;border-radius:26px;padding:30px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}.course h3{font-family:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif!important;font-weight:600!important;letter-spacing:-.025em!important}.course p{color:#c9c9c9}.course-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.course-meta div{border-top:1px solid #3a3a3a;padding-top:12px}.course-meta small{display:block;color:#888}.course-meta strong{font-size:.95rem}
     .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--surface);border-radius:26px;padding:30px;border:1px solid var(--line)}.panel.dark{background:#111;color:#fff;border-color:#111}.panel.dark p,.panel.dark li{color:#bfbfbf}.list-clean{list-style:none;padding:0;margin:22px 0}.list-clean li{padding:12px 0;border-bottom:1px solid rgba(128,128,128,.22)}
 
@@ -79,10 +92,6 @@
     .modal-top{display:flex;justify-content:space-between;gap:20px}.close{border:none;background:#deded9;width:40px;height:40px;border-radius:50%;font-size:1.1rem}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.83rem;font-weight:760;color:#3b3b3b}.field input,.field select,.field textarea{width:100%;border:1px solid #cfcfca;background:#fff;border-radius:12px;padding:12px 13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#111;box-shadow:0 0 0 3px rgba(0,0,0,.06)}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:.8rem;color:var(--muted)}
     .toast{position:fixed;right:20px;bottom:20px;background:#111;color:#fff;padding:14px 18px;border-radius:14px;z-index:200;display:none;box-shadow:var(--shadow)}.toast.show{display:block}
 
-    .urgent-card{background:#111;color:#fff;border-color:#111;position:relative;overflow:hidden}
-    .urgent-card:after{content:"SI";position:absolute;right:-8px;bottom:-34px;font-family:"Cormorant Garamond",Georgia,serif;font-size:8rem;font-weight:700;color:rgba(255,255,255,.045);line-height:1}
-    .urgent-card p,.urgent-card li{color:#c9c9c9}
-    .urgent-card .tag{color:#9b9b9b}
     .urgent-feature{background:#111;color:#fff;border-radius:30px;padding:36px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center;box-shadow:var(--shadow)}
     .urgent-feature h2{font-size:clamp(2.6rem,5vw,4.7rem);font-weight:600;line-height:.92;letter-spacing:-.045em;margin:10px 0 18px}
     .urgent-feature p{color:#c8c8c8;max-width:700px}
@@ -169,8 +178,8 @@
         <div class="section-head"><div><div class="eyebrow">Servicios</div><h2>Cuatro formas de trabajar.</h2></div><p>El acompañamiento cambia según el objetivo: aprender, resolver con urgencia, destrabar un problema o desarrollar un proyecto.</p></div>
         <div class="services">
           <article class="card"><span class="tag">01 · Formación</span><h3>Capacitación</h3><p>Cursos y talleres estructurados para estudiantes, profesionistas y equipos.</p><ul><li>Matemáticas y estadística</li><li>Econometría aplicada</li><li>Análisis de datos</li><li>Gestión pública e indicadores</li></ul><button class="btn btn-secondary" data-open="course">Ver opciones</button></article>
-          <article class="card urgent-card"><span class="tag">02 · Intensivo</span><h3>Sesión intensiva</h3><p>Sesiones particulares para preparar con rapidez un examen, entrega, proyecto, exposición o problema técnico.</p><ul><li>Repaso y comprensión acelerada</li><li>Ejercicios y práctica guiada</li><li>Estrategia de estudio y resolución</li><li>Comprensión, criterio y aplicación práctica</li></ul><button class="btn btn-secondary" style="color:white;border-color:#555;position:relative;z-index:2" data-open="urgent">Solicitar intensivo</button></article>
-          <article class="card"><span class="tag">03 · Uno a uno</span><h3>Asesoría individual</h3><p>Sesiones enfocadas en aprendizaje o resolución de un problema técnico concreto.</p><ul><li>Clases personalizadas</li><li>Revisión de modelos</li><li>Apoyo con R / Python / Excel</li><li>Investigación y metodología aplicada</li></ul><button class="btn btn-primary" data-open="advisory">Solicitar asesoría</button></article>
+          <article class="card"><span class="tag">02 · Intensivo</span><h3>Sesión intensiva</h3><p>Sesiones particulares para preparar con rapidez un examen, entrega, proyecto, exposición o problema técnico.</p><ul><li>Repaso y comprensión acelerada</li><li>Ejercicios y práctica guiada</li><li>Estrategia de estudio y resolución</li><li>Comprensión, criterio y aplicación práctica</li></ul><button class="btn btn-secondary" data-open="urgent">Solicitar intensivo</button></article>
+          <article class="card"><span class="tag">03 · Uno a uno</span><h3>Asesoría individual</h3><p>Sesiones enfocadas en aprendizaje o resolución de un problema técnico concreto.</p><ul><li>Clases personalizadas</li><li>Revisión de modelos</li><li>Apoyo con R / Python / Excel</li><li>Investigación y metodología aplicada</li></ul><button class="btn btn-secondary" data-open="advisory">Solicitar asesoría</button></article>
           <article class="card"><span class="tag">04 · Proyecto</span><h3>Consultoría e investigación</h3><p>Diagnóstico, diseño metodológico, análisis y entregables para necesidades de mayor alcance.</p><ul><li>Investigación aplicada</li><li>Análisis económico y econométrico</li><li>Automatización y datos</li><li>PbR, MML e indicadores</li></ul><button class="btn btn-secondary" data-open="consulting">Plantear proyecto</button></article>
         </div>
       </div>
